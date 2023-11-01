@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Initialize') {
             steps {
-                sh 'terraform init -input=false'
+                sh 'terraform init -auto-approve'
             }
         }
         stage('Plan') {
