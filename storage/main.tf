@@ -11,7 +11,7 @@ resource "google_artifact_registry_repository" "my-repo" {
 
 
 resource "google_storage_bucket" "terraform-bucket-for-state" {
-  name                        = "bucket-dev"
+  name                        = "bucket-mo-iti-final"
   location                    = "US"
   public_access_prevention    = "enforced"
   uniform_bucket_level_access = true
