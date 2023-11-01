@@ -14,7 +14,7 @@ pipeline {
                 sh 'terraform plan'
             }
         }
-        stage('Apply or Destroy') {
+        stage('Apply') {
             when {
                 expression {
                     return params.ACTION == 'Apply'
@@ -24,7 +24,7 @@ pipeline {
                 sh 'terraform apply -auto-approve'
             }
         }
-        stage('Apply or Destroy') {
+        stage('Destroy') {
             when {
                 expression {
                     return params.ACTION == 'Destroy'
