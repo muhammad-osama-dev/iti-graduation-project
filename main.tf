@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = file("./halogen-data-401020-64fde0d02fca.json")
+  credentials = file("./SA_key.json")
   project     = var.project_id
 }
 
