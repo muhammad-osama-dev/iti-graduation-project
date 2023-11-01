@@ -8,18 +8,3 @@ resource "google_artifact_registry_repository" "my-repo" {
     immutable_tags = false
   }
 }
-
-
-resource "google_storage_bucket" "terraform-bucket-for-state" {
-  name                        = "bucket-mo-iti-final"
-  location                    = "US"
-  public_access_prevention    = "enforced"
-  uniform_bucket_level_access = true
-  storage_class = "STANDARD"
-  versioning {
-    enabled = true
-  }
-  labels = {
-    "environment" = "mo"
-  }
-}
