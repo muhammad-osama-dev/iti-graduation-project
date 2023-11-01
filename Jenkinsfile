@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Initialize') {
             steps {
-                sh 'yes | terraform init -migrate-state'
+                sh 'terraform init'
             }
         }
         stage('Plan') {
