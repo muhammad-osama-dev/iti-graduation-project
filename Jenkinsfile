@@ -24,6 +24,16 @@ pipeline {
                 sh 'terraform apply -auto-approve'
             }
         }
+        stage('trigger deployment pipeline') {
+            when {
+                expression {
+                    return params.ACTION == 'Apply'
+                }
+            }
+            steps {
+                build job: "childJob", wait: true
+            }
+        }
         stage('Destroy') {
             when {
                 expression {
