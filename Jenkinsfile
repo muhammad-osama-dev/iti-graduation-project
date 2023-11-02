@@ -31,7 +31,7 @@ pipeline {
                 }
             }
             steps {
-                build job: "childJob", wait: true
+                build job: "iti-final-project-app-pipeline", wait: true
             }
         }
         stage('Destroy') {
