@@ -82,6 +82,10 @@ resource "google_container_cluster" "privatecluster"{
         cidr_block = var.private_ip_cidr_range
         display_name = "vm"
     }
+    cidr_blocks {
+      cidr_block = "34.132.20.209/32"
+      display_name = "my-ip"
+    }
   }
   private_cluster_config {
     enable_private_nodes = true
