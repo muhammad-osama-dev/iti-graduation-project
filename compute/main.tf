@@ -83,7 +83,7 @@ resource "google_container_cluster" "privatecluster"{
         display_name = "vm"
     }
     cidr_blocks {
-      cidr_block = "34.132.20.209/32"
+      cidr_block = "35.184.173.116/32"
       display_name = "my-ip"
     }
 
