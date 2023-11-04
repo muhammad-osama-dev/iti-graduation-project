@@ -75,8 +75,4 @@ You can customize the pipelines and scripts to fit your specific project require
 
 This project is licensed under the [Your License] - see the [LICENSE.md](LICENSE.md) file for details.
 
-## Contact Information
-
-If you have questions, need assistance, or want to report issues, please feel free to contact [Your Contact Information].
-
 Happy DevOpsing!
