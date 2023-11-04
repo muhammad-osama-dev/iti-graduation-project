@@ -6,6 +6,12 @@ pipeline {
     stages {
         stage('Initialize') {
             steps {
+                def gcpCredentials = credentials('terraformkey')
+                withCredentials([file(credentialsId: 'terraformkey', variable: 'TERRAFORM_KEY')]) {
+                    sh "mkdir -p Secrets"
+                    sh "cp \$TERRAFORM_KEY ./SA_key.json"
+                    sh 'ls'
+                }  
                 sh 'terraform init'
             }
         }
